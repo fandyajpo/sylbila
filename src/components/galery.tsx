@@ -1,23 +1,42 @@
-import Screen from "./layout/screen";
+"use client";
+import { useInView, animated } from "@react-spring/web";
+import Image from "next/image";
+
+import First from "public/1.jpeg";
+import Second from "public/2.jpeg";
+import Thirth from "public/3.jpeg";
+import Fourth from "public/4.jpeg";
+import Five from "public/5.jpeg";
+
+const ImageList = [First, Second, Thirth, Fourth, Five];
+
 const Galery = () => {
+  const [ref, inView] = useInView({
+    rootMargin: "-40% 0%",
+  });
   return (
-    <Screen>
-      <div className="grid grid-cols-3 lg:grid-cols-4 w-full h-screen relative">
-        <div className="h-full w-full bg-gray-200 col-span-2 row-span-2 border border-black"></div>
-        <div className="h-full w-full bg-gray-200 border border-black"></div>
-        <div className="h-full w-full bg-gray-200 border border-black"></div>
-        <div className="h-full w-full bg-gray-200 border border-black"></div>
-        <div className="h-full w-full bg-gray-200 border border-black"></div>
-        <div className="h-full w-full bg-gray-200 border border-black"></div>
-        <div className="h-full w-full bg-gray-200 border border-black"></div>
-        <div className="h-full w-full bg-gray-200 border border-black"></div>
-        <div className="h-full w-full bg-gray-200 border border-black"></div>
-        <div className="h-full w-full bg-gray-200 border border-black"></div>
-        <div className="h-full w-full bg-gray-200 border border-black"></div>
-        <div className="h-full w-full bg-gray-200 border border-black"></div>
-        <div className="h-full w-full bg-gray-200 border border-black col-span-3"></div>
-      </div>
-    </Screen>
+    <animated.div
+      ref={ref}
+      className={`grid grid-cols-3 lg:grid-cols-5 w-full duration-1000 relative ${
+        inView ? "h-screen" : "h-24"
+      }`}
+    >
+      {ImageList?.map((a, i) => (
+        <div
+          ref={ref}
+          key={i}
+          className="group h-full hover:w-full w-full bg-gray-200 relative"
+        >
+          <Image
+            loading="lazy"
+            alt="i"
+            src={a}
+            className="w-full h-full object-cover grayscale group-hover:grayscale-0 duration-500"
+            fill
+          />
+        </div>
+      ))}
+    </animated.div>
   );
 };
 

@@ -19,7 +19,8 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Sylbila x Fanvercel",
+  title: "TEST",
+  // title: "Sylbila x Fanvercel",
   description: "Yahaha wahyuuu",
 };
 
