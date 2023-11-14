@@ -1,6 +1,6 @@
-import { Sriracha } from "next/font/google";
+import { Gowun_Dodum } from "next/font/google";
 
-const sri = Sriracha({ subsets: ["latin"], weight: ["400"] });
+const sri = Gowun_Dodum({ subsets: ["latin"], weight: ["400"] });
 
 const Landing = () => {
   return (
