@@ -19,8 +19,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "TEST",
-  // title: "Sylbila x Fanvercel",
+  title: "Sylbila x Fanvercel",
   description: "Yahaha wahyuuu",
 };
 
@@ -31,9 +30,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={poppins.className}>
-        <main>{children}</main>
-      </body>
+      <body className={poppins.className}>{children}</body>
     </html>
   );
 }

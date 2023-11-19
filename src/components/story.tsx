@@ -512,8 +512,8 @@ while True:
 const Story = () => {
   const { scrollYProgress } = useScroll();
   return (
-    <div className="py-14 bg-black">
-      <p className="text-white text-4xl pb-8 text-center">
+    <div className="py-14 bg-pink-200">
+      <p className="text-pink-900 text-4xl pb-8 text-center">
         I copied this message from June 6, 2023.
       </p>
       <div className="w-full h-fit flex flex-wrap gap-2 text-white break-normal whitespace-normal">

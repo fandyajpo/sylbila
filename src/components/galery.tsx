@@ -7,12 +7,13 @@ import Second from "public/2.jpeg";
 import Thirth from "public/3.jpeg";
 import Fourth from "public/4.jpeg";
 import Five from "public/5.jpeg";
+import Six from "public/6.jpeg";
 
-const ImageList = [First, Second, Thirth, Fourth, Five];
+const ImageList = [First, Second, Thirth, Fourth, Six];
 
 const Galery = () => {
   const [ref, inView] = useInView({
-    rootMargin: "-40% 0%",
+    rootMargin: "-20% 0%",
   });
   return (
     <animated.div
