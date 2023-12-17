@@ -8,8 +8,9 @@ import Thirth from "public/3.jpeg";
 import Fourth from "public/4.jpeg";
 import Five from "public/5.jpeg";
 import Six from "public/6.jpeg";
+import Seventh from "public/7.jpeg";
 
-const ImageList = [First, Second, Thirth, Fourth, Six];
+const ImageList = [First, Second, Thirth, Fourth, Six, Seventh];
 
 const Galery = () => {
   const [ref, inView] = useInView({
@@ -18,7 +19,7 @@ const Galery = () => {
   return (
     <animated.div
       ref={ref}
-      className={`grid grid-cols-3 lg:grid-cols-5 w-full duration-1000 relative ${
+      className={`grid grid-cols-3 lg:grid-cols-3 w-full duration-1000 relative ${
         inView ? "h-screen" : "h-24"
       }`}
     >
